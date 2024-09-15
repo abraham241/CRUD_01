@@ -20,7 +20,7 @@ form.addEventListener("submit", (e) => {
 
 let formValidation = () => {
   if (input.value === "") {
-    msg.innerHTML = "Post cannot be blank";
+    msg.innerHTML = "Votre tache est vide";
     console.log("failure");
   } else {
     console.log("successs");
