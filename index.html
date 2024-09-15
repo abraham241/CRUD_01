@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todoListe</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- mon titre -->
+    <h1>Social Media App</h1>
+    <!-- mon container -->
+    <div class="container">
+      <!-- la partie de gauche -->
+      <div class="left">
+        <form id="form">
+          <label for="post"> Ecrivez votre tache ici</label>
+          <br /><br />
+          <textarea name="post" id="input" cols="30" rows="10"></textarea>
+          <br />
+          <br />
+          <div id="msg"></div>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+      <!-- le partie de droit -->
+      <div class="right">
+        <h3>Toutes mes taches</h3>
+        <div id="posts">
+          <div>
+            <p>C'est mon 1er poste</p>
+            <span class="options">
+              <!-- <i class="fas fa-edit"></i> -->
+              <!-- <i class="fas fa-trash-alt"></i> 
+               l'icone du début
+               -->
+              <i onClick="editPost(this)" class="fas fa-edit"></i>
+              <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+            </span>
+          </div>
+
+          <div>
+            <p>C'est mon 2nd poste</p>
+            <span class="options">
+              <!-- <i class="fas fa-edit"></i> -->
+              <!-- <i class="fas fa-trash-alt"></i> 
+               l'icone du début-->
+              <i onClick="editPost(this)" class="fas fa-edit"></i>
+              <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
+</html>
