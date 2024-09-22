@@ -71,8 +71,12 @@ let createPost = () => {
 }*/
 
 // Fonction de supression
+// Fonction de suppression avec confirmation
 let deletePost = (e) => {
-  e.parentElement.parentElement.remove();
+  // Demander une confirmation avant de supprimer
+  if (confirm("Êtes-vous sûr de vouloir supprimer cette tâche ?")) {
+    e.parentElement.parentElement.remove();
+  }
 };
 
 // la fonction pour editer un élément
