@@ -11,13 +11,16 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   // console.log("button clicked");
 
+  // fonction de formulaire de validation
   formValidation();
 
+  // fonction d'accetptation de la data
   acceptData();
 });
 
 // le scrit de validation du formulaire
 
+// ::::::::::::::::::::::::::::::::::::::::::::::::
 let formValidation = () => {
   if (input.value === "") {
     msg.innerHTML = "Votre tache est vide";
@@ -27,15 +30,18 @@ let formValidation = () => {
     msg.innerHTML = "";
   }
 };
+// ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 let data = {};
 
 let acceptData = () => {
   data.text = input.value;
-  console.log(data);
+  // console.log(data);
+  // je lui donne la fonction decréer un poste
   createPost();
 };
 
+// fonction qui crée les posts
 let createPost = () => {
   posts.innerHTML += `
     <div>
@@ -49,10 +55,27 @@ let createPost = () => {
   input.value = "";
 };
 
+// fonction classic
+
+/*function createPost() {
+  posts.innerHTML += `
+    <div>
+      <p>${data.text}</p>
+      <span class="options">
+        <i onClick="editPost(this)" class="fas fa-edit"></i>
+        <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+      </span>
+    </div>
+  `;
+  input.value = "";
+}*/
+
+// Fonction de supression
 let deletePost = (e) => {
   e.parentElement.parentElement.remove();
 };
 
+// la fonction pour editer un élément
 let editPost = (e) => {
   input.value = e.parentElement.previousElementSibling.innerHTML;
   e.parentElement.parentElement.remove();
