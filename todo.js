@@ -9,7 +9,7 @@ let posts = document.getElementById("posts");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  // console.log("button clicked");
+  // console.log("comportement bloqué");
 
   // fonction de formulaire de validation
   formValidation();
